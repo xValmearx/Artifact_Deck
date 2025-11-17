@@ -7,7 +7,7 @@
 script = ExtResource("1_rxl2e")
 
 [node name="Knight" type="Sprite2D" parent="."]
-position = Vector2(3.8147e-06, 1.22786e-05)
+position = Vector2(0, 1.52588e-05)
 scale = Vector2(0.337778, 0.459909)
 texture = ExtResource("2_dx8t1")
 
@@ -18,6 +18,12 @@ offset_left = -152.0
 offset_top = -152.0
 offset_right = 152.0
 offset_bottom = 152.0
+
+[node name="Drag_Area" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0.0392157)
+layout_mode = 0
+offset_right = 304.0
+offset_bottom = 304.0
 
 [node name="Panel" type="Panel" parent="Control"]
 layout_mode = 1
@@ -66,6 +72,8 @@ offset_right = 146.0
 offset_bottom = -113.0
 text = "X"
 
+[connection signal="button_down" from="Control/Drag_Area" to="." method="_on_drag_area_button_down"]
+[connection signal="button_up" from="Control/Drag_Area" to="." method="_on_drag_area_button_up"]
 [connection signal="pressed" from="Control/Add" to="." method="_on_add_pressed"]
 [connection signal="pressed" from="Control/Sub" to="." method="_on_sub_pressed"]
 [connection signal="pressed" from="Delete" to="." method="_on_delete_pressed"]

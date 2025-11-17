@@ -19,6 +19,11 @@ offset_top = -152.0
 offset_right = 152.0
 offset_bottom = 152.0
 
+[node name="Drag_Area" type="Button" parent="Control"]
+modulate = Color(1, 1, 1, 0.0392157)
+offset_right = 304.0
+offset_bottom = 304.0
+
 [node name="Delete" type="Button" parent="."]
 offset_left = 128.0
 offset_top = -144.0
@@ -26,4 +31,6 @@ offset_right = 146.0
 offset_bottom = -113.0
 text = "X"
 
+[connection signal="button_down" from="Control/Drag_Area" to="." method="_on_drag_area_button_down"]
+[connection signal="button_up" from="Control/Drag_Area" to="." method="_on_drag_area_button_up"]
 [connection signal="pressed" from="Delete" to="." method="_on_delete_pressed"]

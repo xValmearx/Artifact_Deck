@@ -15,3 +15,4 @@ func _ready() -> void:
 	
 	update_label()
 	MainScene.increase_AnE_amount.emit()
+	

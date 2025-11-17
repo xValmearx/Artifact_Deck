@@ -1,0 +1,80 @@
+[gd_scene load_steps=3 format=3 uid="uid://cr8wqmojq7x3j"]
+
+[ext_resource type="Script" uid="uid://80rgk1fj64dp" path="res://Scripts/steel_overseer.gd" id="1_wckjo"]
+[ext_resource type="Texture2D" uid="uid://bmtlgt8ibpv8" path="res://images/Overseer.jpg" id="2_qarw1"]
+
+[node name="Steel_Overseer" type="Node2D"]
+script = ExtResource("1_wckjo")
+
+[node name="Overseer" type="Sprite2D" parent="."]
+position = Vector2(-0.5, 0)
+scale = Vector2(0.729665, 1)
+texture = ExtResource("2_qarw1")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -152.0
+offset_top = -152.0
+offset_right = 152.0
+offset_bottom = 152.0
+
+[node name="Panel" type="Panel" parent="Control"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -40.0
+offset_top = -40.0
+offset_right = 32.0
+offset_bottom = -8.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Control/Panel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 3.0
+offset_right = 66.0
+offset_bottom = 26.0
+text = "10 / 10"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Add" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 240.0
+offset_top = 264.0
+offset_right = 258.0
+offset_bottom = 295.0
+text = "+"
+
+[node name="Sub" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 272.0
+offset_top = 264.0
+offset_right = 290.0
+offset_bottom = 295.0
+text = "-"
+
+[node name="Increase_Artifacts" type="Button" parent="Control"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 216.0
+offset_right = 216.0
+offset_bottom = 247.0
+text = "+1 All Artifacts"
+
+[node name="Delete" type="Button" parent="."]
+offset_left = 128.0
+offset_top = -144.0
+offset_right = 146.0
+offset_bottom = -113.0
+text = "X"
+
+[connection signal="pressed" from="Control/Add" to="." method="_on_add_pressed"]
+[connection signal="pressed" from="Control/Sub" to="." method="_on_sub_pressed"]
+[connection signal="pressed" from="Control/Increase_Artifacts" to="." method="_on_increase_artifacts_pressed"]
+[connection signal="pressed" from="Delete" to="." method="_on_delete_pressed"]

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://g6dbx7yrdr7i"]
+
+[ext_resource type="Script" uid="uid://bhfwohe3dm7i8" path="res://Scripts/all_that_glitters.gd" id="1_w0qks"]
+
+[node name="AllThatGlitters" type="Node2D"]
+script = ExtResource("1_w0qks")

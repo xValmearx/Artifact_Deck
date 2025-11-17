@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://cby6mpr1xfm4n"]
+
+[ext_resource type="Script" uid="uid://6fngaqok72pt" path="res://Scripts/holy_strength.gd" id="1_0kfc4"]
+
+[node name="Holy_Strength" type="Node2D"]
+script = ExtResource("1_0kfc4")

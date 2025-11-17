@@ -1,0 +1,13 @@
+[gd_scene load_steps=3 format=3 uid="uid://banbodfw5txgf"]
+
+[ext_resource type="Script" uid="uid://bchsbftdvfgge" path="res://Scripts/main_scene.gd" id="1_3in7s"]
+[ext_resource type="PackedScene" uid="uid://cxpm6eawifg7u" path="res://add_diamond_knight.tscn" id="2_3in7s"]
+
+[node name="Main Scene" type="Node2D"]
+script = ExtResource("1_3in7s")
+
+[node name="Add_Diamond_Knight" parent="." instance=ExtResource("2_3in7s")]
+offset_left = 67.0
+offset_top = 67.0
+offset_right = 107.0
+offset_bottom = 107.0

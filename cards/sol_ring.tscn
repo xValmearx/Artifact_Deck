@@ -1,0 +1,29 @@
+[gd_scene load_steps=3 format=3 uid="uid://bibd4ng1dp57"]
+
+[ext_resource type="Script" uid="uid://bmokvquj6p65c" path="res://Scripts/sol_ring.gd" id="1_elf21"]
+[ext_resource type="Texture2D" uid="uid://b5v7qwcnkau31" path="res://images/sol.jpg" id="2_q18hg"]
+
+[node name="Sol_Ring" type="Node2D"]
+script = ExtResource("1_elf21")
+
+[node name="Sol" type="Sprite2D" parent="."]
+position = Vector2(7.62939e-06, -3.8147e-06)
+scale = Vector2(0.2375, 0.296875)
+texture = ExtResource("2_q18hg")
+
+[node name="Control" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_left = -152.0
+offset_top = -152.0
+offset_right = 152.0
+offset_bottom = 152.0
+
+[node name="Delete" type="Button" parent="."]
+offset_left = 128.0
+offset_top = -144.0
+offset_right = 146.0
+offset_bottom = -113.0
+text = "X"
+
+[connection signal="pressed" from="Delete" to="." method="_on_delete_pressed"]
